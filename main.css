@@ -1,0 +1,197 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+
+* {
+  font-family: 'PT Serif', serif;
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ffc0cb, #9370db);
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: auto;
+  padding: 0 10px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, rgb(163, 227, 235), #7bc6e4);
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.5);
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+  padding: 10px 10px 30px;
+}
+.logo-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top-img {
+  max-width: 80px;
+  max-height: 80px;
+  animation: sun 3s alternate-reverse infinite;
+}
+@keyframes sun {
+  0% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+.title {
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.form {
+  margin: auto;
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 54px;
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.input {
+  max-width: 250px;
+  width: 100%;
+  border: none;
+  margin: 0 20px;
+  padding: 10px;
+}
+.input:focus {
+  outline: none;
+}
+.input:focus::placeholder {
+  color: #474747;
+}
+.header-btn {
+  font-weight: bold;
+  width: 150px;
+  color: #fff;
+  background-color: #d3929d;
+  border: none;
+  border-radius: 6px;
+  padding: 0 20px;
+  cursor: pointer;
+  transition: all 0.4s linear;
+}
+.header-btn:hover,
+.header-btn:focus {
+  background-color: #b09ed3;
+}
+
+.card {
+  background-color: #fff;
+  background-image: url(img/town-bg.jpg);
+  background-size: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 500px;
+  width: 100%;
+  margin: 30px auto;
+  padding-top: 60px;
+}
+
+.card-title {
+  display: inline-block;
+  font-size: 30px;
+  color: #885059;
+  font-weight: bold;
+  margin: 0;
+  margin-right: 10px;
+}
+.country {
+  font-size: 16px;
+  color: #fff;
+  background-color: #d3929d;
+  border-radius: 6px;
+  padding: 2px 5px;
+}
+.card-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.temp {
+  font-size: 2em;
+  margin: 20px 0 0;
+  color: #885059;
+}
+.temp-fills {
+  font-size: 16px;
+  color: #885059;
+  margin-top: 0;
+}
+.deg {
+  font-size: 24px;
+  color: #885059;
+}
+.weather-img {
+  max-width: 100%;
+  height: auto;
+  animation: rotate 3s linear infinite alternate-reverse;
+}
+.desc {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 18px;
+  color: #e4b3bb;
+}
+.main-slider {
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+.forecast-card {
+  background: #fff;
+  margin: 0 5px;
+  border-radius: 6px;
+  color: #885059;
+  background: linear-gradient(to top, #ffc0cb, #e6e6fa);
+}
+.forecast-card img {
+  margin: auto;
+}
+.card-date {
+  color: #474747;
+}
+.card-desc {
+  font-size: 12px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(-10deg) scale(0.8);
+  }
+  100% {
+    transform: rotate(10deg) scale(1.1);
+  }
+}
+@media (max-width: 600px) {
+  .title {
+    font-size: 22px;
+  }
+  .card-date,
+  .card-feels {
+    font-size: 14px;
+  }
+  .card-img {
+    max-width: 40px;
+  }
+  .card-desc {
+    margin-top: 0;
+  }
+}
